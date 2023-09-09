@@ -37,12 +37,12 @@ public class Main {
         ParkedCar Vehicle = new ParkedCar("Tesla", "Model X", "Black","LOLGAS",75);
         ParkingMeter meter = new ParkingMeter(60);
         PoliceOfficer policeOfficer = new PoliceOfficer("Officer Donut Lord", "09967");
-        ParkingTicket ticket = ParkingTicket.CheckVehicle(vehicle, meter);
+        ParkingTicket ticket = ParkingTicket.CheckVehicle(Vehicle, meter);
 
         if(ticket != null) {
             System.out.println("parking ticket issued: ");
-            System.out.println("Officer:" + ticket.getofficername() + "Badge #: " + ticket.getbadgenumber());
-            System.out.println("Car: " + ticker.getvehicle().getcolor() + ticket.getCar().getmake() + ticker.getcar().getmodel + "License" + ticket.getlicensenumer());
+            System.out.println("Officer:" + PoliceOfficer.getofficername() + "Badge #: " + PoliceOfficer.getBadgeNumber());
+            System.out.println("Car: " + ticket.getvehicle().getcolor() + ticket.getvehicle().getmake() + ticket.getvehicle().getmodel + "License" + ticket.getlicensenumer());
             System.out.println("Fine: $" + ticket.getfine());
         }
         else {

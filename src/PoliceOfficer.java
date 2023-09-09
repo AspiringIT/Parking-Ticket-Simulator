@@ -3,8 +3,15 @@ public class PoliceOfficer {
     private String BadgeNumber;
 
     public PoliceOfficer(String Name, String badgenumber){
-        this.name = name;
+        this.name = Name;
         this.BadgeNumber = badgenumber;
 
+    }
+    public static String getofficername(){
+        return name;
+    }
+
+    public static String getBadgeNumber(){
+        return BadgeNumber;
     }
 }

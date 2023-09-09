@@ -16,5 +16,7 @@ public class ParkedCar {
         this.minutesparked = minparked;
     }
 
-
+    public int getMinutesparked() {
+        return minutesparked;
+    }
 }

@@ -1,3 +1,7 @@
 public class ParkingMeter {
-    float purchasedminutes = 60;
+    private int purchasedminutes;
+
+    public ParkingMeter(int purchasedminutes){
+    this.purchasedminutes = purchasedminutes;
+    }
 }

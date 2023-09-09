@@ -1,7 +1,10 @@
 public class ParkingMeter {
-    private int purchasedminutes;
+    private int purchasedMinutes;
 
-    public ParkingMeter(int purchasedminutes){
-    this.purchasedminutes = purchasedminutes;
+    public ParkingMeter(int purchasedMinutes){
+    this.purchasedMinutes = purchasedMinutes;
     }
+
+public int getPurchasedMinutes(){return purchasedMinutes;}
+
 }

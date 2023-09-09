@@ -3,20 +3,32 @@ public class ParkedCar {
     private String model;
    private String color;
     private  String licensenumber;
-    private  int minutesparked;
-    private String licenseNumr;
+    private  int minutesParked;
 
-    public  ParkedCar(String make, String model, String color, String licenseNum, int minparked){
+    public  ParkedCar(String make, String model, String color, String licenseNumber, int minutesParked){
 
 
         this.make = make;
         this.model = model;
         this.color = color;
-        this.licensenumber = licenseNum;
-        this.minutesparked = minparked;
+        this.licensenumber = licenseNumber;
+        this.minutesParked = minutesParked;
     }
 
     public int getMinutesparked() {
-        return minutesparked;
+        return minutesParked;
     }
+
+    public String getmake(){return make;}
+
+    public String getmodel(){return model;}
+
+    public String getColor(){return color;}
+
+    public String getlicenseNumber(){return licensenumber;}
+
+    public int getMinutesParked(){
+        return minutesParked;
+    }
+
 }

@@ -1,25 +1,23 @@
 public class ParkingTicket {
-    private static ParkedCar vehicle;
-    private int Fine;
-    private String officername;
-    private String BadgeNumber;
-    public void parkingticket(ParkedCar vehicle, int fine, String officerName, String BadgeNumber) {
-        this.vehicle = vehicle;
-        this.Fine = fine;
-        this.officername = officerName;
-        this.badgenumber = BadgeNumber;
+    private  ParkedCar parkedCar;
+    private int fine;
+    private String officerName;
+    private String badgeNumber;
+    public ParkingTicket(ParkedCar parkedCar, int fine, String officerName, String badgeNumber) {
+        this.parkedCar = parkedCar;
+        this.fine = fine;
+        this.officerName = officerName;
+        this.badgeNumber = badgeNumber;
 
     }
-    public static ParkingTicket CheckVehicle(ParkedCar Vehicle, ParkingMeter meter){
-        if (vehicle.getMinutesparked() > meter.getPurchasedMinutes()) {
-            int timeover = vehicle.getMinutesParked();
-            int fine = 25 + (timeover / 60) * 10;
-            return new ParkingTicket(vehicle, fine, name, BadgeNumber);
-        }
-        else{
-            return null;
-            }
-        }
+    public ParkedCar getParkedCar(){return parkedCar;}
+
+    public int getFine(){return fine;}
+
+    public String getOfficerName(){return officerName;}
+
+    public String getbadgeNumber(){return badgeNumber;}
+
     }
 
 

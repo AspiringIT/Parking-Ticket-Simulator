@@ -34,20 +34,19 @@ public class Main {
     public static void main(String[] args) {
         // Press Opt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
-        ParkedCar Vehicle = new ParkedCar("Tesla", "Model X", "Black","LOLGAS",75);
+        ParkedCar Vehicle = new ParkedCar("Tesla", "Model X ", "Black","LOLGAS",525600); //Parked for 1 year this results in a large fine and the car will soon be impounded
         ParkingMeter meter = new ParkingMeter(60);
-        PoliceOfficer policeOfficer = new PoliceOfficer("Officer Donut Lord", "09967");
-        ParkingTicket ticket = ParkingTicket.CheckVehicle(Vehicle, meter);
+        PoliceOfficer po = new PoliceOfficer("Officer Donut Lord", "09967"); //Remember Variable names can't be the same as the class name. It will throw hands in the air and give up :)
+        ParkingTicket ticket =  po.inspectCar(Vehicle, meter);
 
         if(ticket != null) {
-            System.out.println("parking ticket issued: ");
-            System.out.println("Officer:" + PoliceOfficer.getofficername() + "Badge #: " + PoliceOfficer.getBadgeNumber());
-            System.out.println("Car: " + ticket.getvehicle().getcolor() + ticket.getvehicle().getmake() + ticket.getvehicle().getmodel + "License" + ticket.getlicensenumer());
-            System.out.println("Fine: $" + ticket.getfine());
+            System.out.println("Parking ticket issued: ");
+            System.out.println("Officer: " + po.getName() + "Badge #: " + po.getBadgeNumber());
+            System.out.println("Car: " + Vehicle.getColor() + " " + Vehicle.getmake() +" " +  Vehicle.getmodel() + "License " + ticket.getParkedCar().getlicenseNumber());
+            System.out.println("Fine: $" + ticket.getFine());
         }
         else {
             System.out.println("No parking violation found.");
         }
         }
     }
-}
